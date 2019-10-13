@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParse = require("body-parser");
-const mongoose = require("mongoose");
 
 const morraGameRouter = require("./router/morraGame");
 const trianglesRouter = require("./router/triangles");
@@ -12,13 +11,7 @@ const minAndMaxRouter = require("./router/minAndMax");
 const avgNumbersRouter = require("./router/avgNumbers");
 const primeNumbersRouter = require("./router/primeNumbers");
 const factorialNumbersRouter = require("./router/factorialNumbers");
-// mongoose.connect("mongodb+srv://corrado:yhhGomWiaUGUNX9I@cluster0-f6xao.mongodb.net/social-network?retryWrites=true&w=majority")
-//   .then(() => {
-//     console.log("Connected to database")
-//   })
-//   .catch(() => {
-//     console.log("Connection failed")
-//   })
+const positiveNumbersRouter = require("./router/positiveNumbers");
 
 const app = express();
 
@@ -47,5 +40,6 @@ app.use("/api/minAndMax", minAndMaxRouter);
 app.use("/api/avgNumbers", avgNumbersRouter);
 app.use("/api/primeNumbers", primeNumbersRouter);
 app.use("/api/factorialNumbers", factorialNumbersRouter);
+app.use("/api/positiveNumbers", positiveNumbersRouter);
 
 module.exports = app;

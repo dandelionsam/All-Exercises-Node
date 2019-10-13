@@ -18,11 +18,3 @@ router.use("/:number", (req, res, next) => {
 });
 
 module.exports = router;
-
-// N = document.getElementById("num").value;
-// p = 1;
-
-// while(N > 0){
-//     p = p * N;
-//     N = N - 1;
-// }
