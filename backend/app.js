@@ -6,6 +6,7 @@ const morraGameRouter = require("./router/morraGame");
 const trianglesRouter = require("./router/triangles");
 const leapYearRouter = require("./router/leapYear");
 const converterLettersRouter = require("./router/converterWords");
+const arrayOrderedRouter = require("./router/arrayOrdered");
 // mongoose.connect("mongodb+srv://corrado:yhhGomWiaUGUNX9I@cluster0-f6xao.mongodb.net/social-network?retryWrites=true&w=majority")
 //   .then(() => {
 //     console.log("Connected to database")
@@ -35,5 +36,6 @@ app.use("/api/morra", morraGameRouter);
 app.use("/api/triangles", trianglesRouter);
 app.use("/api/leapYear", leapYearRouter);
 app.use("/api/converter", converterLettersRouter);
+app.use("/api/arrayOrdered", arrayOrderedRouter);
 
 module.exports = app;
