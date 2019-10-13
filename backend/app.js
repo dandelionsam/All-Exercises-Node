@@ -12,6 +12,7 @@ const avgNumbersRouter = require("./router/avgNumbers");
 const primeNumbersRouter = require("./router/primeNumbers");
 const factorialNumbersRouter = require("./router/factorialNumbers");
 const positiveNumbersRouter = require("./router/positiveNumbers");
+const coinChangingRouter = require("./router/coinChanging");
 
 const app = express();
 
@@ -41,5 +42,6 @@ app.use("/api/avgNumbers", avgNumbersRouter);
 app.use("/api/primeNumbers", primeNumbersRouter);
 app.use("/api/factorialNumbers", factorialNumbersRouter);
 app.use("/api/positiveNumbers", positiveNumbersRouter);
+app.use("/api/coinChanging", coinChangingRouter);
 
 module.exports = app;
