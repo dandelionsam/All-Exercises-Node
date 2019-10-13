@@ -9,6 +9,7 @@ const converterLettersRouter = require("./router/converterWords");
 const arrayOrderedRouter = require("./router/arrayOrdered");
 const palindromeWordsRouter = require("./router/palindromeWords");
 const minAndMaxRouter = require("./router/minAndMax");
+const avgNumbers = require("./router/avgNumbers");
 // mongoose.connect("mongodb+srv://corrado:yhhGomWiaUGUNX9I@cluster0-f6xao.mongodb.net/social-network?retryWrites=true&w=majority")
 //   .then(() => {
 //     console.log("Connected to database")
@@ -41,5 +42,6 @@ app.use("/api/converter", converterLettersRouter);
 app.use("/api/arrayOrdered", arrayOrderedRouter);
 app.use("/api/palindromeWords", palindromeWordsRouter);
 app.use("/api/minAndMax", minAndMaxRouter);
+app.use("/api/avgNumbers", avgNumbers);
 
 module.exports = app;
