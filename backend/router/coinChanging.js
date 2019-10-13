@@ -25,7 +25,7 @@ getRest = (amount) => {
 
 router.use("/:amount", (req, res, next) => {
     amount = parseFloat(req.params.amount);
-    expense = parseFloat(req.query.buy);
+    expense = req.query.buy ? parseFloat(req.query.buy) : undefined;
     if (expense > amount) {
         res.json({
             message: "Insufficient credit!"
