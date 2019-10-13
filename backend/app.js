@@ -11,6 +11,7 @@ const palindromeWordsRouter = require("./router/palindromeWords");
 const minAndMaxRouter = require("./router/minAndMax");
 const avgNumbersRouter = require("./router/avgNumbers");
 const primeNumbersRouter = require("./router/primeNumbers");
+const factorialNumbersRouter = require("./router/factorialNumbers");
 // mongoose.connect("mongodb+srv://corrado:yhhGomWiaUGUNX9I@cluster0-f6xao.mongodb.net/social-network?retryWrites=true&w=majority")
 //   .then(() => {
 //     console.log("Connected to database")
@@ -45,5 +46,6 @@ app.use("/api/palindromeWords", palindromeWordsRouter);
 app.use("/api/minAndMax", minAndMaxRouter);
 app.use("/api/avgNumbers", avgNumbersRouter);
 app.use("/api/primeNumbers", primeNumbersRouter);
+app.use("/api/factorialNumbers", factorialNumbersRouter);
 
 module.exports = app;
